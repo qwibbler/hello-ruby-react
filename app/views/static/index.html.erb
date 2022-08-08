@@ -1,0 +1,4 @@
+<!-- application.html.erb in Head tag below turbolinks -->
+<%= javascript_pack_tag 'application' %>
+<!-- erb: paste this in view -->
+<%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
