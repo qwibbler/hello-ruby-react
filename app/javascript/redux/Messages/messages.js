@@ -19,7 +19,7 @@ const messageReducer = (state = initState, action) => {
 
 export const fetchmessage = () => async (dispatch) => {
   dispatch({ type: 'FETCHING_MESSAGE' });
-  await fetch('/v1/things')
+  await fetch('/v1/messages')
     .then((response) => response.json())
     .then((data) => {
       dispatch({ type: 'COMPLETE_MESSAGE', payload: data });
