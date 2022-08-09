@@ -1,21 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import configureStore from '../configureStore';
+import React from "react"
+import { Provider } from "react-redux";
 
-import HelloWorld from './HelloWorld';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Greeting from "./Greeting.js";
 
-const store = configureStore();
+import store from "../redux/configureStore";
+
 class App extends React.Component {
-  render() {
+  render () {
     return (
       <Provider store={store}>
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<h1>Hello World</h1>} />
-            <Route path="/hello" element={<HelloWorld greeting="Friend" />} />
-          </Routes>
-        </Router>
+       <Router>
+        <Routes>
+          <Route path="/" element={<Greeting />} />
+        </Routes>
+       </Router>
       </Provider>
     );
   }

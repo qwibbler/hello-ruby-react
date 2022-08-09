@@ -54,3 +54,4 @@ end
 gem 'tzinfo-data'
 
 gem 'net-smtp'
+gem 'rubocop', '>= 1.0', '< 2.0'
